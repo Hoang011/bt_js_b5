@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>bt b5</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="bt_qlsv">
+            <h3 class="text-center">Bài tập quản lý tuyển sinh</h3>
+            <div class="form-group">
+                <label for="">Nhập vào điểm chuẩn</label>
+                <input id="diemChuan" type="text" class="form-control" />
+                <label for="">Nhập vào điểm 3 môn</label>
+                <div class="input-group">
+                    <input id="diemMon1" type="text" aria-label="First name" class="form-control" placeholder="Điểm môn 1"/>
+                    <input id="diemMon2" type="text" aria-label="Last name" class="form-control" placeholder="Điểm môn 3"/>
+                    <input id="diemMon3"type="text" aria-label="Last name" class="form-control" placeholder="Điểm môn 2"/>
+                </div>
+            </div>        
+            <div class="form-group">
+                <label for="">Khu vực ưu tiên (chọn X nếu không thuộc khu vực nào)</label>
+                <br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="khuvucA"
+                        value="2" checked>
+                    <label class="form-check-label" for="exampleRadios1">A</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="khuvucB"
+                        value="1">
+                    <label class="form-check-label" for="exampleRadios2">B </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="khuvucC"
+                        value="0.5">
+                    <label class="form-check-label" for="exampleRadios3">C </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="khuvuc0"
+                        value="0">
+                    <label class="form-check-label" for="exampleRadios3">X </label>
+                </div>
+            </div>     
+            <div class="form-group ">
+                <label for="">Đối tượng ưu tiên (chọn 0 nếu không thuộc đối tượng ưu tiên nào)</label>
+                <br>
+                <select class="custom-select" id="slDoiTuong">
+                    <option id="" selected value="0">0</option>
+                    <option value="2.5">1</option>
+                    <option value="1.5">2</option>
+                    <option value="1">3</option>
+                  </select>
+            </div>
+            <button id="btnBt1" class="btn btn-success">Kết quả</button>
+            <br>
+            <br>
+            <label>Tổng điểm của bạn:</label>
+            <input type="text" id="bt1Output" class="form-control" style="border: none; color: red; font-size: 25px;width: auto;">
+            <h4 class="text-danger" id="ketQua"></h4>
+
+        </div>
+        <div class="bt_tiendien">
+            <h3 class="text-center"> Bài tập tính tiền điện</h3>
+            <div class="form-group">
+                <p> Nhập vào tên của bạn</p>
+                <input type="text" id="ten" class="form-control" >
+                <br>
+                <p> Nhập vào số điện đã sử dụng (KW)</p>
+                <input type="text" id="soDien" class="form-control" >
+                <br>
+                <button id="btn_bt2" class="btn btn-success">Tính</button>
+                <br>
+                <br>
+                <p id="outputTen"></p>
+
+                <p id="outputTienDien"></p>
+            </div>
+        </div>
+        <div class="bt_tinhtienthue">
+            <h3>Bài tập tính thuế thu nhập cá nhân </h3>
+            <div class="form-group">
+                <p>Nhập họ và tên</p>
+                <input type="text" name="hoten" id="hoten" class="form-control" placeholder="Họ và tên">
+                <p>Tổng thu nhập hằng năm</p>
+                <input type="number" name="thunhap" id="thunhap" class="form-control">
+                <p>Số người phụ thuộc</p>
+                <input type="number" name="nguoiPhuThuoc" id="nguoiPhuThuoc" class="form-control">
+                <br>
+                <button class="btn btn-success" id="btn_bt3">Tính</button>
+                <p id="outputTienThue"></p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
